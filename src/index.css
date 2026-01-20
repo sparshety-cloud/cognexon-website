@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep all your existing CSS from the previous index.css here */
+@layer base {
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    @apply bg-background-dark overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-white/10;
+  }
+  
+  .neural-bg {
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(60, 131, 246, 0.05) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233c83f6' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .magnetic-card {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  .magnetic-card:hover {
+    @apply -translate-y-3 translate-x-1 shadow-[10px_10px_30px_rgba(60,131,246,0.2)];
+  }
+  
+  .perspective-container {
+    perspective: 1500px;
+  }
+  
+  .tilt-card {
+    @apply transition-all duration-500 ease-out;
+    transform-style: preserve-3d;
+  }
+  
+  .tilt-card:hover {
+    transform: rotateX(5deg) rotateY(-5deg) translateZ(20px);
+    @apply ring-2 ring-primary/30;
+  }
+  
+  .timeline-step {
+    @apply opacity-30 grayscale transition-all duration-700;
+  }
+  
+  .timeline-step.active {
+    @apply opacity-100 grayscale-0;
+  }
+  
+  .timeline-step.active .step-number {
+    @apply text-cyan-neon shadow-[0_0_20px_rgba(6,182,212,0.6)] border-cyan-neon/50 bg-cyan-900/20 scale-110;
+    animation: pulse-glow 3s infinite;
+  }
+  
+  .timeline-step.active .step-content {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  .timeline-step.active.reverse .step-content {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  .page-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .ai-orbit {
+    animation: orbit 10s linear infinite;
+  }
+  
+  .quote-modal-glow {
+    box-shadow: 0 0 40px -10px rgba(60, 131, 246, 0.5), 0 0 0 1px rgba(60, 131, 246, 0.4);
+  }
+  
+  .shimmer-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+  
+  .shimmer-btn:hover::after {
+    left: 100%;
+  }
+  
+  .neon-text-glow {
+    text-shadow: 0 0 10px rgba(6,182,212,0.8);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+@keyframes streamFlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(6,182,212,0.4); border-color: rgba(6,182,212,0.4); }
+  50% { box-shadow: 0 0 30px rgba(6,182,212,0.8); border-color: rgba(6,182,212,1); }
+}
+
+@keyframes drawLine {
+  from { height: 0%; }
+  to { height: 60%; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Add these animations to your index.css */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spinOnce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-spin-once {
+  animation: spinOnce 0.3s ease-out;
+}
+
+/* Mobile menu item animations */
+.mobile-menu a {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* Navbar backdrop blur enhancement */
+.glass-panel {
+  @apply bg-slate-900/80 backdrop-blur-xl border border-white/10;
+}
+
+/* Timeline-specific animations */
+.timeline-step {
+  opacity: 0.3;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-step.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-step.active .step-number {
+  @apply text-cyan-neon shadow-[0_0_20px_rgba(6,182,212,0.6)] border-cyan-neon/50 bg-slate-900 scale-110;
+  animation: pulse-glow 3s infinite;
+}
+
+.timeline-step.active:nth-child(odd) .step-content {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.timeline-step.active:nth-child(even) .step-content {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Animation delays for staggered effect */
+.timeline-step:nth-child(1) { transition-delay: 0.1s; }
+.timeline-step:nth-child(2) { transition-delay: 0.2s; }
+.timeline-step:nth-child(3) { transition-delay: 0.3s; }
+.timeline-step:nth-child(4) { transition-delay: 0.4s; }
+.timeline-step:nth-child(5) { transition-delay: 0.5s; }
+.timeline-step:nth-child(6) { transition-delay: 0.6s; }
+
+/* Content animations */
+.timeline-step .step-content {
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pulsing glow animation */
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    border-color: rgba(6, 182, 212, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.8);
+    border-color: rgba(6, 182, 212, 1);
+  }
+}
