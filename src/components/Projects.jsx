@@ -13,7 +13,7 @@ const Projects = () => {
         { value: '30%', label: 'Efficiency Boost' }
       ],
       tech: ['Django', 'Postgres', 'React'],
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPuEexZdPDBdzYzjl7cgZDuF4-pnnshDUnKaT49Jpq__7UrwUZ9tFA5O7mtsBO67Mz3cvdL4knZEoE08bHVUtJ_eCt5uCaAOavlupOhc9cnnPiG08z849vhXcAFJOt87-eub2l5CE9ETtlAe-piuCeifRb4-_8sAG4M3BFfdNZYvsMmCKuqa7GUOQjxT-FkCMHLUBCDlbf1crZCG_NYkQy3VR087C5nt_pwCID0BmYKRv7T7Qa4buwuLy6Wyq_c7eiO1oh9tDl7wM'
+      image: '/hms.jpeg'
     },
     {
       category: 'Real Estate',
@@ -26,7 +26,7 @@ const Projects = () => {
         { value: '4.8', label: 'App Store Rating' }
       ],
       tech: ['Flutter', 'Firebase', 'AR Kit'],
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiyc5fM-QLuc529KJuiDaVQ-7Jo7yknZSvGN0ZK_BEpLe1bSKzdfTnwX8tXEwsNC8eYB8Hy8QGYW1pYzJVRe4gGdvLnLfHsf5lJjmuej54LpM019RZDCIYyyUWIN3xCa39rCPK-bIy3Fi3ZqdPKfRjdk-uZUUMCGRJvE4iHO7VAOdpZjTL6fPBRcZZ5zHnPntdVUwWaNwTz6o1jENdObhFOGTmc42RVxWU1eY2JD1pHBeOqXu9aEXzWs-8pgdOUDn-sTWt0jo6eOc',
+      image: '/rms.png',
       reverse: true
     },
     {
@@ -40,7 +40,7 @@ const Projects = () => {
         { value: '12hr', label: 'Avg. Placement Time' }
       ],
       tech: ['Go', 'Kubernetes', 'Swift'],
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDaMsWs2_zug28QC1C3OpjkLoOMEEjue8xDn39zAW4YYOAZ3Uo490DCpuUkaGJcXMi4Q0TbOn9JIxZ973r7LHb7sXRP4KrUL_SEplU57xRD3C5WNtkhkSDKBaYMN4lFUaoiu3sd4FFPIs3CQXZtZBb95sld_rDSG82L95xfIj1ClMwnLGMqsLIT1nwHTpiihYk95wmIthl-AcpBtG1ffimu1Gx3Nkc8nbnLoMOxUay_9QG-miqdaKhGlH-Rz_E4V4bOMBWma8K3rxI'
+      image: '/lms.png'
     }
   ];
 
