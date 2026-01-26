@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Product from './Product';
 import Website from './Website';
 
-// Main App component with routing
 function App() {
   return (
     <Router>
