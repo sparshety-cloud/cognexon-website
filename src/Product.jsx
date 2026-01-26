@@ -121,7 +121,7 @@ const Navbar = ({ toggleSidebar }) => (
     {/* Logo Section */}
     <div className="flex items-center gap-2">
       <img src="./assets/logo2.png" alt="Logo" className="h-10" /> 
-      <span className="font-bold text-2xl text-gray-900 tracking-tight">Cognexa.ai</span>
+      <span className="font-bold text-2xl text-gray-900 tracking-tight">Cognexon.ai</span>
     </div>
 
     {/* Centered Links - Hidden on mobile */}
@@ -190,7 +190,7 @@ const MobileSidebar = ({ isOpen, closeSidebar }) => {
         <div className="flex items-center justify-between p-6 border-b">
           <div className="flex items-center gap-2">
             <img src="./assets/logo2.png" alt="Logo" className="h-8" />
-            <span className="font-bold text-lg">Cognexa.ai</span>
+            <span className="font-bold text-lg">Cognexon.ai</span>
           </div>
           <button onClick={closeSidebar} className="p-2 hover:bg-gray-100 rounded-lg">
             <X size={24} />
@@ -496,7 +496,7 @@ const PrivacyPolicy = () => {
         {/* Introduction */}
         <div className="bg-white rounded-2xl p-8 mb-8 shadow-sm border border-gray-100">
           <p className="text-gray-700 leading-relaxed">
-            At Cognexa.ai, we are committed to protecting your privacy and the privacy of the children in your care. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI monitoring platform for daycare centers and preschools.
+            At Cognexon.ai, we are committed to protecting your privacy and the privacy of the children in your care. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI monitoring platform for daycare centers and preschools.
           </p>
         </div>
 
@@ -762,7 +762,7 @@ const Onboarding = () => {
       title: "Setup & Installation",
       image: "./assets/product.png",
       points: [
-        "A Cognexa AI box arrives at your facility.",
+        "A Cognexon AI box arrives at your facility.",
         "Opt for self-installation or certified technician support.",
         "Plug-and-play with your existing camera system—no disruptions"
       ],
@@ -773,7 +773,7 @@ const Onboarding = () => {
       title: "Configuration & Integration",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
       points: [
-        "Guided setup call with a Cognexa expert",
+        "Guided setup call with a Cognexon expert",
         "Choose which classrooms to monitor",
         "Choose modules (safety, cleaning, engagement etc)",
         "Integrate with APIs and set up alert preferences",
@@ -889,7 +889,7 @@ const ElevateStandards = () => {
         <div className="text-center mb-16">
           <h2 className="md:text-4xl text-3xl font-extrabold text-gray-900 mb-6">Elevate Your Childcare Standards</h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-            Cognexa.ai helps childcare centers improve quality, enhance safety, and provide peace of mind through advanced AI monitoring.
+            Cognexon.ai helps childcare centers improve quality, enhance safety, and provide peace of mind through advanced AI monitoring.
           </p>
         </div>
 
@@ -1013,7 +1013,7 @@ const RealTimeAlerts = () => {
                     <Shield size={14} className="md:w-5 md:h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xs md:text-sm">Cognexa Alerts</h3>
+                    <h3 className="font-bold text-xs md:text-sm">Cognexon Alerts</h3>
                     <p className="text-[9px] md:text-[10px] opacity-80">Safety notifications</p>
                   </div>
                 </div>
@@ -1268,11 +1268,11 @@ function Product() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-6 md:mb-0">
               <img src="./assets/logo2.png" alt="Logo" className="h-8" /> 
-              <span className="font-bold text-xl">Cognexa.ai</span>
+              <span className="font-bold text-xl">Cognexon.ai</span>
             </div>
             
             <div className="text-center md:text-right">
-              <p className="text-gray-400 mb-2">© 2025 Cognexa Solutions. All rights reserved.</p>
+              <p className="text-gray-400 mb-2">© 2025 Cognexon Solutions. All rights reserved.</p>
               <p className="text-sm text-gray-500">MSME Registered</p>
             </div>
           </div>
