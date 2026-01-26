@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ onGetStarted }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,6 +61,17 @@ const Navbar = ({ onGetStarted }) => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
+          
+          {/* Product Link to Daycare Website */}
+          <Link
+            to="/daycare"
+            className="text-sm font-medium text-white/90 hover:text-primary transition-colors relative group flex items-center gap-1"
+          >
+            <span className="material-symbols-outlined text-sm">rocket_launch</span>
+            Product: Daycare AI
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          
           <button
             onClick={onGetStarted}
             className="bg-primary hover:bg-primary/90 text-white px-5 lg:px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg hover:shadow-primary/40 hover:-translate-y-0.5"
@@ -102,6 +114,17 @@ const Navbar = ({ onGetStarted }) => {
               {item.label}
             </a>
           ))}
+          
+          {/* Mobile Product Link */}
+          <Link
+            to="/daycare"
+            className="block text-lg font-medium text-white hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-white/5 flex items-center gap-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <span className="material-symbols-outlined text-lg">rocket_launch</span>
+            Product: Daycare AI
+          </Link>
+          
           <div className="pt-6 border-t border-white/10">
             <button
               onClick={() => {
