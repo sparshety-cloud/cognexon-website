@@ -10,11 +10,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Website/>} />
         <Route path="/daycare" element={<Product />} />
-        {/* Optional: Add a catch-all route */}
         <Route path="*" element={<Product />} />
       </Routes>
     </Router>
   );
 }
+
 
 export default App;
